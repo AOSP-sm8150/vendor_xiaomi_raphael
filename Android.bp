@@ -5,19 +5,13 @@
 soong_namespace {
 	imports: [
 	"device/xiaomi/raphael",
-        "hardware/google/interfaces",
-        "hardware/google/pixel",
-        "hardware/xiaomi",
-        "vendor/qcom/common/system/av",
-        "vendor/google/pixel",
-        "hardware/qcom-caf/sm8150",
-	"hardware/qcom-caf/sm8250",
-        "vendor/qcom/opensource/commonsys/display",
-        "vendor/qcom/opensource/commonsys-intf/display",
-        "vendor/qcom/opensource/display",
-        "vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um",
-        "vendor/qcom/opensource/dataservices",
-        "hardware/qcom-caf/wlan",
+	"hardware/qcom-caf/sm8150",
+	"hardware/qcom-caf/wlan",
+	"hardware/xiaomi",
+	"vendor/qcom/opensource/dataservices",
+	"vendor/qcom/opensource/commonsys-intf/display",
+	"vendor/qcom/opensource/commonsys/display",
+	"vendor/qcom/opensource/display",
 	],
 }
 
@@ -1450,6 +1444,27 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "libdisplaydebug",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libdisplaydebug.so"],
+			shared_libs: ["libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdisplaydebug.so"],
+			shared_libs: ["libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libdpmqmihal",
 	owner: "xiaomi",
 	strip: {
@@ -1484,6 +1499,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libdrmfs.so"],
 			shared_libs: ["libutils", "libcutils", "libdiag", "liblog", "libQSEEComAPI", "libxml2", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libdrmutils",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libdrmutils.so"],
+			shared_libs: ["libdrm", "libdisplaydebug", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdrmutils.so"],
+			shared_libs: ["libdrm", "libdisplaydebug", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",
@@ -2807,6 +2843,27 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libscveObjectTracker_stub.so"],
 			shared_libs: ["libfastcvopt", "liblog", "libscveCommon", "libcdsprpc", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libsdmutils",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libsdmutils.so"],
+			shared_libs: ["libdisplaydebug", "libc++", "libc", "libm", "libdl", ],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libsdmutils.so"],
+			shared_libs: ["libdisplaydebug", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "both",

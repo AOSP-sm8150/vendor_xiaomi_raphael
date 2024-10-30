@@ -325,8 +325,10 @@ PRODUCT_PACKAGES += \
     libconfigdb \
     libcpion \
     libdiag \
+    libdisplaydebug \
     libdpmqmihal \
     libdrmfs \
+    libdrmutils \
     libdsi_netctrl \
     libdsutils \
     libfastcvdsp_stub \
@@ -390,6 +392,7 @@ PRODUCT_PACKAGES += \
     libscveObjectSegmentation_stub \
     libscveObjectTracker \
     libscveObjectTracker_stub \
+    libsdmutils \
     libsdsprpc \
     libsnsapi \
     libspcom \
