@@ -263,6 +263,7 @@ PRODUCT_PACKAGES += \
     libEGL_adreno \
     libGLESv1_CM_adreno \
     libGLESv2_adreno \
+    libVkLayer_ADRENO_qprofiler \
     libq3dtools_adreno \
     libq3dtools_esx \
     android.hardware.bluetooth@1.0-impl-qti \
@@ -278,7 +279,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.capabilityconfigstore@1.0-impl \
     vendor.xiaomi.hardware.motor@1.0-impl \
     vulkan.adreno \
-    libC2D2 \
     libCB \
     libI420colorconvert \
     libOmxAacDec \
@@ -292,8 +292,8 @@ PRODUCT_PACKAGES += \
     libOmxVpp \
     libOmxWmaDec \
     libOpenCL \
+    libOpenCL_adreno \
     libQSEEComAPI \
-    libVkLayer_q3dtools \
     libacdb-fts \
     libacdbloader \
     libacdbrtac \
@@ -310,7 +310,6 @@ PRODUCT_PACKAGES += \
     libbatching \
     libbt-hidlclient \
     libbtnv \
-    libc2d30_bltlib \
     libcamera_nn_stub \
     libcamxfdalgov7 \
     libcamxfdalgov8 \
@@ -340,15 +339,17 @@ PRODUCT_PACKAGES += \
     libgeofencing \
     libgnss \
     libgps.utils \
-    libgpudataproducer \
     libgsl \
     libidl \
+    libkcl \
+    libkernelmanager \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
     liblistensoundmodel2 \
     libllvm-glnext \
     libllvm-qcom \
+    libllvm-qgl \
     libloc_core \
     liblocation_api \
     libmdmdetect \
@@ -364,7 +365,6 @@ PRODUCT_PACKAGES += \
     libnpu \
     liboemcrypto \
     libpdmapper \
-    libpvr \
     libqcbor \
     libqcci_legacy \
     libqcmaputils \
@@ -903,9 +903,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libimscamera_jni_libimscamera_jni_symlink64 \
     libimsmedia_jni_libimsmedia_jni_symlink64 \
-    libEGL_adreno_libEGL_adreno_symlink32 \
     libGLESv2_adreno_libGLESv2_adreno_symlink32 \
+    libVkLayer_ADRENO_qprofiler_libVkLayer_ADRENO_qprofiler_symlink32 \
     libq3dtools_adreno_libq3dtools_adreno_symlink32 \
-    libEGL_adreno_libEGL_adreno_symlink64 \
     libGLESv2_adreno_libGLESv2_adreno_symlink64 \
+    libVkLayer_ADRENO_qprofiler_libVkLayer_ADRENO_qprofiler_symlink64 \
     libq3dtools_adreno_libq3dtools_adreno_symlink64
